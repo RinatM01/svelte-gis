@@ -50,7 +50,7 @@
 		toolTip
 			.style('left', `${event.clientX}px`)
 			// @ts-ignore
-			.style('top', `${event.clientY - toolTip2.offsetHeight}px`);
+			.style('top', `${event.y - toolTip2.offsetHeight}px`);
 	}
 
 	let mouseOver = function (e, feature) {
@@ -82,7 +82,6 @@
 	};
 </script>
 
-<h1>Hiiii</h1>
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <div
 	class="flex"
@@ -90,7 +89,7 @@
 >
 	<div
 		id="Tooltip"
-		class={`Tooltip p-2 bg-slate-100 rounded-lg absolute pointer-events-none opacity-${isOver ? '1' : '0'}`}
+		class={`Tooltip p-2 bg-slate-100 rounded-lg fixed pointer-events-none opacity-${isOver ? '1' : '0'}`}
 	>
 		<h3 class="m-0 p-0 text-lg">{districtName} District</h3>
 		<p>{districtLoss * 100}%</p>

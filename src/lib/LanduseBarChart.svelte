@@ -42,7 +42,7 @@
 				`${e.x - bod.offsetLeft - toolTip2.offsetWidth / 2 - xScale.bandwidth() / 4}px`
 			)
 			// @ts-ignore
-			.style('top', `${yScale(area) - toolTip2.offsetHeight}px`);
+			.style('top', `${yScale(area) - toolTip2.offsetHeight - 10}px`);
 		// console.log(d.target);
 		d3.selectAll('.Bar')
 			.transition()
@@ -70,7 +70,7 @@
 
 <div
 	id="Container-Landuse"
-	class="my-60 relative"
+	class="relative"
 >
 	<div
 		id="Tooltip-Landuse"

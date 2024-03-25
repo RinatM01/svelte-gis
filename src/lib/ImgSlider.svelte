@@ -44,7 +44,7 @@
 		window.addEventListener('mousemove', (e) => {
 			if (moving) {
 				let bod = document.querySelector('#Container');
-				percent = ((e.x - bod.offsetLeft) / bod.offsetWidth) * 100;
+				//percent = ((e.x - bod.offsetLeft) / bod.offsetWidth) * 100;
 				if (left > -1 && left < bod.offsetWidth + 1) {
 					left += e.movementX;
 				} else if (left <= 0) {
@@ -52,6 +52,8 @@
 				} else {
 					left = bod.offsetWidth;
 				}
+				console.log(left);
+				percent = (left / bod.offsetWidth) * 100;
 				node.style.left = `${left}px`;
 			}
 		});
@@ -68,8 +70,8 @@
 	class="relative w-[1000px] h-[710.58px]"
 >
 	<img
-		src={leftImg}
-		alt={leftAlt}
+		src={rightImg}
+		alt={rightAlt}
 		class="absolute w-[1000px] h-auto non-draggable"
 	/>
 
@@ -98,8 +100,8 @@
 	</div>
 
 	<img
-		src={rightImg}
-		alt={rightAlt}
+		src={leftImg}
+		alt={leftAlt}
 		class="absolute w-[1000px] h-auto non-draggable"
 		style={`clip-path: polygon(0% 0%, ${percent}% 0%, ${percent}% 100%, 0% 100%)`}
 	/>

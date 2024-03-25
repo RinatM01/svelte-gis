@@ -2,10 +2,10 @@
 	import * as d3 from 'd3';
 	import distance from '../data/distance';
 	export let width = 1000;
-	export let height = 600;
+	export let height = 550;
 	export let marginTop = 50;
 	export let marginRight = 10;
-	export let marginBottom = 160;
+	export let marginBottom = 75;
 	export let marginLeft = 40;
 	const labels = distance.map((x) => x.range);
 
@@ -38,10 +38,10 @@
 			.style(
 				'left',
 				// @ts-ignore
-				`${e.x - bod.offsetLeft - toolTip2.offsetWidth / 2 + 120}px`
+				`${e.x - bod.offsetLeft - toolTip2.offsetWidth / 2}px`
 			)
 			// @ts-ignore
-			.style('top', `${yScale(area) - toolTip2.offsetHeight - 40}px`);
+			.style('top', `${yScale(area) - toolTip2.offsetHeight - 10}px`);
 		// console.log(d.target);
 		d3.selectAll('.Bar-d')
 			.transition()
@@ -69,7 +69,7 @@
 
 <div
 	id="Container-Distance"
-	class="my-60 relative"
+	class="relative"
 >
 	<div
 		id="Tooltip-Distance"
@@ -139,7 +139,7 @@
 				<text
 					fill="currentColor"
 					text-anchor="start"
-					x={xScale(dist.range)}
+					x={xScale(dist.range) + xScale.bandwidth() / 6}
 					y={22}
 				>
 					{dist.range}
