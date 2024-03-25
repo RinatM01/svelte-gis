@@ -35,6 +35,7 @@
 		// m.x = event.clientX;
 		// m.y = event.clientY;
 		toolTip
+			.style('opacity', 1)
 			.style(
 				'left',
 				// @ts-ignore
@@ -56,6 +57,7 @@
 
 	let mouseLeave = function (d) {
 		isOver = false;
+		d3.select('#Tooltip-Distance').style('opacity', 0);
 		d3.selectAll('.Bar-d')
 			.transition()
 			.duration(100)
@@ -73,7 +75,7 @@
 >
 	<div
 		id="Tooltip-Distance"
-		class={`p-2 bg-slate-100 rounded-lg absolute pointer-events-none opacity-${isOver ? '1' : '0'}`}
+		class={`p-2 bg-slate-100 rounded-lg absolute pointer-events-none opacity-0`}
 	>
 		<h3 class="m-0 p-0 text-lg">{rangeName}</h3>
 		<p>{perc}%</p>

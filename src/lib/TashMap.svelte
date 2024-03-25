@@ -60,6 +60,7 @@
 		districtName = feature.properties.ADM2_EN;
 		districtLoss = feature.properties.GREEN_LOSS;
 		// console.log(d.target);
+		d3.select('#Tooltip').style('opacity', 1);
 		d3.selectAll('.Country')
 			.transition()
 			.duration(200)
@@ -73,6 +74,7 @@
 
 	let mouseLeave = function (d) {
 		isOver = false;
+		d3.select('#Tooltip').style('opacity', 0);
 		d3.selectAll('.Country')
 			.transition()
 			.duration(200)
@@ -89,7 +91,7 @@
 >
 	<div
 		id="Tooltip"
-		class={`Tooltip p-2 bg-slate-100 rounded-lg fixed pointer-events-none opacity-${isOver ? '1' : '0'}`}
+		class={`Tooltip p-2 bg-slate-100 rounded-lg fixed pointer-events-none opacity-0`}
 	>
 		<h3 class="m-0 p-0 text-lg">{districtName} District</h3>
 		<p>{districtLoss * 100}%</p>

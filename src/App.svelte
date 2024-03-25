@@ -154,7 +154,7 @@
 <style>
 	.Banner {
 		background-image: linear-gradient(#26311da8, #26311da8),
-			url('forest.jpg');
+			url('../../public/forest.jpg');
 		background-size: cover;
 	}
 </style>
