@@ -93,8 +93,8 @@
 		id="Tooltip"
 		class={`Tooltip p-2 bg-slate-100 rounded-lg fixed pointer-events-none opacity-0`}
 	>
-		<h3 class="m-0 p-0 text-lg">{districtName} District</h3>
-		<p>{districtLoss * 100}%</p>
+		<h3 class="m-0 p-0 text-lg font-bold">{districtName} District</h3>
+		<p class="text-center text-lg">{districtLoss * 100}%</p>
 	</div>
 	<svg
 		width={dimensions.width}

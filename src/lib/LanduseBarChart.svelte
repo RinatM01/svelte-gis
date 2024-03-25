@@ -78,8 +78,10 @@
 		id="Tooltip-Landuse"
 		class={`p-2 bg-slate-100 rounded-lg absolute pointer-events-none opacity-0`}
 	>
-		<h3 class="m-0 p-0 text-lg">{landuseType}</h3>
-		<p>{Math.floor(10 ** areaNum)}m<sup>2</sup></p>
+		<h3 class="m-0 p-0 text-lg font-bold">{landuseType}</h3>
+		<p class="text-center text-md">
+			{Math.floor(10 ** areaNum).toLocaleString()}m<sup>2</sup>
+		</p>
 	</div>
 	<svg
 		{width}

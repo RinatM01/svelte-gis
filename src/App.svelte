@@ -32,10 +32,9 @@
 			Another example is
 			<a
 				class="text-[#627254] hover:underline"
-				href="https://t.me/makarenko_channel"
-				>the news that Tashkent authorities planned to cut down
-				another park with 1,000</a
-			> trees and construct a business center, which has sparked protests
+				href="https://t.me/makarenko_channel">the news</a
+			> that Tashkent authorities planned to cut down another park with
+			1,000 trees and construct a business center, which has sparked protests
 			from residents who were surprised by the ongoing construction, as
 			it was not officially coordinated with them.
 		</p>
@@ -131,11 +130,12 @@
 			</p>
 		</section>
 		<p class="p-5 max-w-[50rem] mx-auto text-lg text-justify">
-			This chart shows us that areas close to the city center or far
-			away have experienced much less green area loss. In fact, the
-			city center area has actually gained more green land than it
-			lost. On the other hand, it is the area in the middle ranges of
-			1300m-7900m that faced most of the redevelopment of green zones.
+			This chart shows us that areas close to the city center
+			(0m-1300m) and far away (7900m-9900m) have experienced much less
+			green area loss. In fact, the city center area has actually
+			gained more green land than it lost. On the other hand, it is
+			the area in the middle ranges of 1300m-7900m that faced most of
+			the redevelopment of green zones.
 		</p>
 
 		<p class="p-5 max-w-[50rem] mx-auto text-lg pb-20 text-justify">

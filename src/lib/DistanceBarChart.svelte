@@ -77,8 +77,8 @@
 		id="Tooltip-Distance"
 		class={`p-2 bg-slate-100 rounded-lg absolute pointer-events-none opacity-0`}
 	>
-		<h3 class="m-0 p-0 text-lg">{rangeName}</h3>
-		<p>{perc}%</p>
+		<h3 class="m-0 p-0 text-lg font-bold">{rangeName}</h3>
+		<p class="text-center text-md">{perc}%</p>
 	</div>
 	<svg
 		{width}
