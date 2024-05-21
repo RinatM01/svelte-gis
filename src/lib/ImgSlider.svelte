@@ -6,6 +6,8 @@
 
 	let percent = 25;
 	let x = 250;
+	let bod = document.querySelector('#Container');
+	console.log(bod);
 
 	// let dragging = false;
 
@@ -67,17 +69,17 @@
 <!-- svelte-ignore a11y-no-static-element-interactions -->
 <div
 	id="Container"
-	class="relative w-[1000px] h-[710.58px]"
+	class="relative w-[450px] h-[320px] sm:w-[500px] sm:h-[355px] md:w-[1000px] md:h-[710.58px]"
 >
 	<img
 		src={rightImg}
 		alt={rightAlt}
-		class="absolute w-[1000px] h-auto non-draggable"
+		class="absolute w-[450px] sm:w-[500px] md:w-[1000px] h-auto non-draggable"
 	/>
 
 	<div
 		use:dragMe
-		class="absolute w-3 h-[710.58px] top-0 bg-white z-10 cursor-pointer"
+		class="absolute w-3 h-[320px] sm:h-[355px] md:h-[710.58px] top-0 bg-white z-10 cursor-pointer"
 	>
 		<div
 			class="absolute top-[48%] left-[-1.4em] bg-white p-3 z-20 rounded-full cursor-pointer"
@@ -102,7 +104,7 @@
 	<img
 		src={leftImg}
 		alt={leftAlt}
-		class="absolute w-[1000px] h-auto non-draggable"
+		class="absolute w-[450px] sm:w-[500px] w-[1000px] h-auto non-draggable"
 		style={`clip-path: polygon(0% 0%, ${percent}% 0%, ${percent}% 100%, 0% 100%)`}
 	/>
 </div>

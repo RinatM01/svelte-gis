@@ -10,19 +10,62 @@
 	console.log(data);
 	// Setting up the map
 	let dimensions = {
-		width: 975,
-		height: 720,
-		margin: {
-			top: 24,
-			right: 0,
-			left: 0,
-			bottom: 6,
+		lg: {
+			width: 975,
+			height: 720,
+			offset: {
+				x: 350,
+				y: 100,
+			},
+			margin: {
+				top: 24,
+				right: 0,
+				left: 0,
+				bottom: 6,
+			},
+		},
+		md: {
+			width: 675,
+			height: 620,
+			offset: {
+				x: 260,
+				y: 90,
+			},
+			margin: {
+				top: 18,
+				right: 0,
+				left: 0,
+				bottom: 10,
+			},
+		},
+		sm: {
+			width: 575,
+			height: 420,
+			offset: {
+				x: 260,
+				y: 90,
+			},
+			margin: {
+				top: 24,
+				right: 0,
+				left: 0,
+				bottom: 6,
+			},
 		},
 	};
+
+	let size =
+		window.innerWidth <= 640
+			? 'sm'
+			: window.innerWidth <= 768
+				? 'md'
+				: 'lg';
+	//console.log(window.innerWidth);
+	//console.log(dimensions[size].height);
 	const currPorjection = d3
 		.geoTransverseMercator()
 		.rotate([-68, 0, 0])
-		.fitSize([dimensions.width, dimensions.height], data);
+		.fitSize([dimensions[size].width, dimensions[size].height], data);
 	const path = geoPath(currPorjection);
 	const tashFeatures = data.features;
 	const ratios = data.features.map((f) => f.properties.GREEN_LOSS);
@@ -97,9 +140,9 @@
 		<p class="text-center text-lg">{districtLoss * 100}%</p>
 	</div>
 	<svg
-		width={dimensions.width}
-		height={dimensions.height}
-		viewBox={`0 0 ${dimensions.width} ${dimensions.height}`}
+		width={dimensions[size].width}
+		height={dimensions[size].height}
+		viewBox={`0 0 ${dimensions[size].width} ${dimensions[size].height}`}
 	>
 		<g>
 			<!-- <path fill="none" stroke="white" stroke-linejoin="round" d={path(stateMesh)} /> -->
@@ -118,7 +161,7 @@
 			{/each}
 		</g>
 		<Legend
-			{dimensions}
+			dimensions={dimensions[size]}
 			{colors}
 			{categories}
 		/>

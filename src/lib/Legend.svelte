@@ -12,7 +12,7 @@
 </script>
 
 <g
-	transform={`translate(${dimensions.width - 350}, ${dimensions.height - 100})`}
+	transform={`translate(${dimensions.width - dimensions.offset.x}, ${dimensions.height - dimensions.offset.y})`}
 >
 	<text
 		font-size="18"
